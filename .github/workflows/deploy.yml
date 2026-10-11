@@ -1,0 +1,67 @@
+name: Deploy AMS to EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+
+      - name: Lint PHP Syntax
+        run: |
+          echo "==> Linting PHP files..."
+          find application/ -type f -name "*.php" -exec php -l {} \; > /dev/null
+          echo "==> All PHP files passed syntax checks!"
+
+  deploy:
+    name: Deploy to AWS EC2
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy on EC2 via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: ${{ secrets.EC2_PORT || 22 }}
+          script: |
+            set -e
+            echo "==> Deploying AMS updates to EC2..."
+
+            APP_DIR="$HOME/ams"
+
+            if [ ! -d "$APP_DIR" ]; then
+              echo "==> Cloning ams repository..."
+              git clone https://github.com/${{ github.repository }}.git "$APP_DIR"
+            fi
+
+            cd "$APP_DIR"
+
+            echo "==> Fetching latest changes from origin/main..."
+            git fetch origin main
+            git reset --hard origin/main
+
+            echo "==> Building and launching AMS containers..."
+            docker compose down || true
+            docker compose up --build -d
+
+            echo "==> Pruning dangling docker images..."
+            docker image prune -f
+
+            echo "==> Checking running AMS containers..."
+            docker ps --filter "name=ams"
+            echo "==> AMS deployment successfully completed!"

@@ -1,0 +1,48 @@
+<?php
+  include 'assets/includes/header.php';
+  include 'assets/includes/sidebar.php';
+?>
+   <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Detail report of appointment made by dentist</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+                        <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="panel panel-default">
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+										  	<th>S.N</th>
+											<th>dentist name</th>
+											<th>patient name</th>
+											<th>appointment date</th>
+											<th>appointment time</th>
+											<th>clinic name</th>
+									    </tr>
+										<?php $i=1;
+											foreach ($result as $results) {	?>
+												<td><?php echo $i; $i++;?></td>
+												<td><?php echo $results->dentist_firstname.' '.$results->dentist_lastname;?></td>
+												<td><?php echo $results->patient_firstname.' '.$results->patient_lastname;?></td>
+												<td><?php echo $results->appointment_date;?></td>
+												<td><?php echo $results->appointment_time;?></td>
+												<td><?php echo $results->clinic_location;?></td><?php
+											}?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+<?php include 'assets/includes/footer.php';?>

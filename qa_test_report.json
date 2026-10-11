@@ -1,0 +1,218 @@
+[
+  {
+    "step": "Public: Login Page rendering",
+    "status": "PASS",
+    "details": "Login inputs verified",
+    "timestamp": "2026-10-10T11:53:13.832Z"
+  },
+  {
+    "step": "Public: Forgot Password Page",
+    "status": "PASS",
+    "details": "Email field verified",
+    "timestamp": "2026-10-10T11:53:15.277Z"
+  },
+  {
+    "step": "Public: Registration Page",
+    "status": "PASS",
+    "details": "ID code & User type selection verified",
+    "timestamp": "2026-10-10T11:53:16.295Z"
+  },
+  {
+    "step": "Security: Invalid Login Handling",
+    "status": "PASS",
+    "details": "Alert displayed on invalid credentials",
+    "timestamp": "2026-10-10T11:53:17.638Z"
+  },
+  {
+    "step": "Admin: Login & Dashboard redirect",
+    "status": "PASS",
+    "details": "Current URL: http://localhost:8080/dashboard",
+    "timestamp": "2026-10-10T11:53:19.288Z"
+  },
+  {
+    "step": "Admin: Dashboard Statistics View",
+    "status": "PASS",
+    "details": "Stats: Total Patients Total Dentists Total Clinics Total Appointments Total Services 3 2 2 2 3",
+    "timestamp": "2026-10-10T11:53:19.289Z"
+  },
+  {
+    "step": "Admin: Manage Clinics List",
+    "status": "PASS",
+    "details": "Clinics table rendered",
+    "timestamp": "2026-10-10T11:53:20.289Z"
+  },
+  {
+    "step": "Admin: Add Clinic Form",
+    "status": "PASS",
+    "details": "Add Clinic form loaded",
+    "timestamp": "2026-10-10T11:53:21.286Z"
+  },
+  {
+    "step": "Admin: Manage Dentists List",
+    "status": "PASS",
+    "details": "Dentists table rendered",
+    "timestamp": "2026-10-10T11:53:22.278Z"
+  },
+  {
+    "step": "Admin: Add Dentist Form",
+    "status": "PASS",
+    "details": "Add Dentist form loaded",
+    "timestamp": "2026-10-10T11:53:23.243Z"
+  },
+  {
+    "step": "Admin: Manage Patients List",
+    "status": "PASS",
+    "details": "Patients table rendered",
+    "timestamp": "2026-10-10T11:53:24.122Z"
+  },
+  {
+    "step": "Admin: Add Patient Form",
+    "status": "PASS",
+    "details": "Add Patient form loaded",
+    "timestamp": "2026-10-10T11:53:25.119Z"
+  },
+  {
+    "step": "Admin: Search Patient Form",
+    "status": "PASS",
+    "details": "Patient search by ID code loaded",
+    "timestamp": "2026-10-10T11:53:26.119Z"
+  },
+  {
+    "step": "Admin: Manage Services List",
+    "status": "PASS",
+    "details": "Services table rendered",
+    "timestamp": "2026-10-10T11:53:27.024Z"
+  },
+  {
+    "step": "Admin: Add Service Form",
+    "status": "PASS",
+    "details": "Add Service form loaded",
+    "timestamp": "2026-10-10T11:53:28.085Z"
+  },
+  {
+    "step": "Admin: Manage Appointments List",
+    "status": "PASS",
+    "details": "Appointments table rendered",
+    "timestamp": "2026-10-10T11:53:29.155Z"
+  },
+  {
+    "step": "Admin: Add Appointment Form",
+    "status": "PASS",
+    "details": "Add Appointment form loaded",
+    "timestamp": "2026-10-10T11:53:30.211Z"
+  },
+  {
+    "step": "Admin: Weekly Dentist Report",
+    "status": "PASS",
+    "details": "Dentist report rendered",
+    "timestamp": "2026-10-10T11:53:31.259Z"
+  },
+  {
+    "step": "Admin: Day Ahead Appointment Report",
+    "status": "PASS",
+    "details": "Day ahead report rendered",
+    "timestamp": "2026-10-10T11:53:32.308Z"
+  },
+  {
+    "step": "Admin: Weekly Clinic Report",
+    "status": "PASS",
+    "details": "Clinic report rendered",
+    "timestamp": "2026-10-10T11:53:33.302Z"
+  },
+  {
+    "step": "Admin: Add System User Form",
+    "status": "PASS",
+    "details": "Add user form loaded",
+    "timestamp": "2026-10-10T11:53:34.196Z"
+  },
+  {
+    "step": "Admin: Logout",
+    "status": "PASS",
+    "details": "Successfully logged out",
+    "timestamp": "2026-10-10T11:53:34.764Z"
+  },
+  {
+    "step": "Dentist: Login & Profile redirect",
+    "status": "PASS",
+    "details": "Current URL: http://localhost:8080/dentists_profile",
+    "timestamp": "2026-10-10T11:53:36.323Z"
+  },
+  {
+    "step": "Dentist: Appointments View",
+    "status": "PASS",
+    "details": "Dentist appointments table loaded",
+    "timestamp": "2026-10-10T11:53:37.092Z"
+  },
+  {
+    "step": "Dentist: Notifications View",
+    "status": "PASS",
+    "details": "Dentist notifications list loaded",
+    "timestamp": "2026-10-10T11:53:38.149Z"
+  },
+  {
+    "step": "Dentist: Services View",
+    "status": "PASS",
+    "details": "Dentist services catalog loaded",
+    "timestamp": "2026-10-10T11:53:39.231Z"
+  },
+  {
+    "step": "Dentist: Change Password Form",
+    "status": "PASS",
+    "details": "Change password form loaded",
+    "timestamp": "2026-10-10T11:53:40.306Z"
+  },
+  {
+    "step": "Dentist: Logout",
+    "status": "PASS",
+    "details": "Successfully logged out",
+    "timestamp": "2026-10-10T11:53:40.880Z"
+  },
+  {
+    "step": "Patient: Login & Profile redirect",
+    "status": "PASS",
+    "details": "Current URL: http://localhost:8080/patients_profile",
+    "timestamp": "2026-10-10T11:53:42.788Z"
+  },
+  {
+    "step": "Patient: Appointments View",
+    "status": "PASS",
+    "details": "Patient appointments table loaded",
+    "timestamp": "2026-10-10T11:53:43.364Z"
+  },
+  {
+    "step": "Patient: Add Appointment Form",
+    "status": "PASS",
+    "details": "Patient add appointment form loaded",
+    "timestamp": "2026-10-10T11:53:44.280Z"
+  },
+  {
+    "step": "Patient: Notifications View",
+    "status": "PASS",
+    "details": "Patient notifications list loaded",
+    "timestamp": "2026-10-10T11:53:45.340Z"
+  },
+  {
+    "step": "Patient: Services View",
+    "status": "PASS",
+    "details": "Services catalog loaded",
+    "timestamp": "2026-10-10T11:53:46.404Z"
+  },
+  {
+    "step": "Patient: Change Password Form",
+    "status": "PASS",
+    "details": "Change password form loaded",
+    "timestamp": "2026-10-10T11:53:47.337Z"
+  },
+  {
+    "step": "Patient: Logout",
+    "status": "PASS",
+    "details": "Successfully logged out",
+    "timestamp": "2026-10-10T11:53:47.896Z"
+  },
+  {
+    "step": "Patient: Empty Appointments Graceful State",
+    "status": "PASS",
+    "details": "Graceful empty table rendered without exceptions",
+    "timestamp": "2026-10-10T11:53:49.891Z"
+  }
+]

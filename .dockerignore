@@ -1,0 +1,7 @@
+.git
+.idea
+qa_screenshots
+qa_test_report.json
+QA_TEST_REPORT.md
+*.log
+.DS_Store

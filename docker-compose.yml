@@ -1,0 +1,35 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ams-web:latest
+    container_name: ams-web
+    restart: always
+    ports:
+      - "127.0.0.1:8081:80"
+    environment:
+      CI_ENV: production
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.4
+    container_name: ams-db
+    restart: always
+    command: --innodb-buffer-pool-size=48M --performance-schema=OFF --key-buffer-size=16M --max-connections=30
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: ams
+    volumes:
+      - ams-db-data:/var/lib/mysql
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  ams-db-data:

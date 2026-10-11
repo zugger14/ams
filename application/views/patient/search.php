@@ -1,0 +1,23 @@
+<?php
+  include 'assets/includes/header.php';
+  include 'assets/includes/sidebar.php';
+?>
+  <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Search patients by id code</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <form method="POST">
+                    Enter patient id number:<input type="number" name="id">
+                    <input type="submit" value="search">
+                </form>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+<?php include 'assets/includes/footer.php';?>
